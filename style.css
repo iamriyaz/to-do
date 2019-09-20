@@ -1,0 +1,11 @@
+.completed{
+    color: green;
+}
+.complete{
+    margin: 1em;
+    padding: 0px 8px;
+}
+.delete{
+    margin: 1em;
+    padding: 0px 8px;
+}
