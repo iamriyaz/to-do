@@ -2,9 +2,15 @@ const input = document.getElementById("input");
 const addBtn = document.getElementById("add");
 const list = document.getElementById("list");
 
+input.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        addBtn.click();
+    }
+});
 addBtn.addEventListener("click", function (){
     const userInput = input.value;
-    if(input !== ""){
+    if(userInput !== ""){
         console.log(userInput);
         const li = document.createElement("li");
         const deleteSpan = document.createElement("BUTTON");
