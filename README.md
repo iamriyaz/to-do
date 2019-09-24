@@ -1,3 +1,3 @@
 # To-do
 
-A bsic To-do app created with plain javascript.
+A basic To-do app created with plain javascript.
