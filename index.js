@@ -3,20 +3,26 @@ const addBtn = document.getElementById("add");
 const list = document.getElementById("list");
 
 addBtn.addEventListener("click", function (){
-    const userInput = input.value;
-    console.log(userInput);
-    const li = document.createElement("li");
-    const deleteSpan = document.createElement("span");
-    const completeSpan = document.createElement("span");
-    deleteSpan.setAttribute("class", "delete"); 
-    completeSpan.setAttribute("class", "complete"); 
-    deleteSpan.appendChild(document.createTextNode("x"));
-    completeSpan.appendChild(document.createTextNode("y"));
-    li.appendChild(document.createTextNode(userInput));
-    li.appendChild(completeSpan);
-    li.appendChild(deleteSpan);
-    list.appendChild(li);
-    input.value = "";
+    if(input != ""){
+        const userInput = input.value;
+        console.log(userInput);
+        const li = document.createElement("li");
+        const deleteSpan = document.createElement("BUTTON");
+        const completeSpan = document.createElement("BUTTON");
+        deleteSpan.setAttribute("class", "delete"); 
+        completeSpan.setAttribute("class", "complete"); 
+        deleteSpan.appendChild(document.createTextNode("Delete"));
+        completeSpan.appendChild(document.createTextNode("Complete"));
+        li.appendChild(document.createTextNode(userInput));
+        li.appendChild(completeSpan);
+        li.appendChild(deleteSpan);
+        list.appendChild(li);
+        input.value = "";
+    }
+    else
+    {
+        alert("Enter Something...");
+    }
 
 })
 
@@ -34,4 +40,4 @@ list.addEventListener("click",function(e) {
         console.log(tgt.parentNode.parentNode)
         tgt.parentNode.classList.toggle("completed");
     }
-  });
+});
