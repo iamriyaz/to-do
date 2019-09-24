@@ -3,8 +3,8 @@ const addBtn = document.getElementById("add");
 const list = document.getElementById("list");
 
 addBtn.addEventListener("click", function (){
-    if(input != ""){
-        const userInput = input.value;
+    const userInput = input.value;
+    if(input !== ""){
         console.log(userInput);
         const li = document.createElement("li");
         const deleteSpan = document.createElement("BUTTON");
